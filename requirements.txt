@@ -1,0 +1,6 @@
+flask
+gunicorn
+pdfplumber
+sqlalchemy
+psycopg2-binary
+requests
