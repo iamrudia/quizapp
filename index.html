@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>퀴즈 앱</title>
+</head>
+<body>
+  <h1>퀴즈 풀기</h1>
+  <form method="POST" action="/submit">
+    <label>이름: <input type="text" name="name" required></label><br><br>
+    {% for q in questions %}
+      <p>{{ loop.index }}. {{ q.question }}</p>
+      {% for opt in q.options %}
+        <label>
+          <input type="radio" name="answer" value="{{ opt }}" required> {{ opt }}
+        </label><br>
+      {% endfor %}
+      <br>
+    {% endfor %}
+    <button type="submit">보내기</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>교사 화면</title>
+</head>
+<body>
+  <h1>학생 점수 확인</h1>
+  <ul>
+    {% for s in scores %}
+      <li>{{ s.name }}: {{ s.score }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
